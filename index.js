@@ -64,24 +64,6 @@ function clearTimer(id) {
 }
 
 /**
- * @function setTimeout
- * @desc Same as NodeJS.setTimeout with no Drift
- * @param {*} callFN Function handler that should be executed after delayMs
- * @param {!Number} delayMs Delay in milliseconds before callFN execution
- * @param  {...any} params Handler parameters
- * @returns {Number}
- */
-function setTimeout(callFN, delayMs = 1, ...params) {
-    const id = currTimeId++;
-    setTimer(id, {
-        executeAt: now() + delayMs,
-        fn: () => callFN(...params)
-    });
-
-    return id;
-}
-
-/**
  * @function setInterval
  * @desc Same as NodeJS.setInterval with no Drift
  * @param {*} callFN Function handler that should be executed after delayMs
@@ -106,6 +88,5 @@ function setInterval(callFN, delayMs = 1, ...params) {
 
 module.exports = {
     setInterval,
-    setTimeout,
     clearTimer
 };
