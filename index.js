@@ -59,6 +59,7 @@ function setTimer(id, opts) {
 function clearTimer(id) {
     if (timeHandles.has(id)) {
         nodeTimer.clearTimeout(timeHandles.get(id));
+        timeHandles.delete(id);
     }
 }
 
