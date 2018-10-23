@@ -51,12 +51,12 @@ function setTimer(id, opts) {
 }
 
 /**
- * @function clearTimer
+ * @function clearInterval
  * @desc Clear a timer (interval or timeout) with his id.
  * @param {!Number} id Time handle id
  * @returns {void}
  */
-function clearTimer(id) {
+function clearInterval(id) {
     if (timeHandles.has(id)) {
         nodeTimer.clearTimeout(timeHandles.get(id));
         timeHandles.delete(id);
@@ -88,5 +88,5 @@ function setInterval(callFN, delayMs = 1, ...params) {
 
 module.exports = {
     setInterval,
-    clearTimer
+    clearInterval
 };
