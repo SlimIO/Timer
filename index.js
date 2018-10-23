@@ -75,7 +75,7 @@ function setTimeout(callFN, delayMs = 1, ...params) {
     const id = currTimeId++;
     setTimer(id, {
         executeAt: now() + delayMs,
-        fn: () => callFN.call(null, ...params)
+        fn: () => callFN(...params)
     });
 
     return id;
