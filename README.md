@@ -1,5 +1,5 @@
 # Timer
-SlimIO - NodeJS Driftless Interval Timer
+SlimIO - NodeJS Driftless Interval Timer. This package is inspired by [driftless](https://github.com/dbkaplun/driftless)
 
 ![MIT](https://img.shields.io/github/license/mashape/apistatus.svg)
 ![V1.0](https://img.shields.io/badge/version-1.0.0-blue.svg)
@@ -15,12 +15,19 @@ $ npm i @slimio/timer
 $ yarn add @slimio/timer
 ```
 
+## Why
+
+Node.js timer (interval and timeout) drift with the time. This package aim to implement a no-drift setInterval.
+
 ## Usage example
 
 ```js
 const timer = require("@slimio/timer");
 
-timer.setInterval(() => {
+const timerId = timer.setInterval(() => {
     console.log("hello world!");
 }, 1000);
+
+// Later...
+timer.clearTimer(timerId);
 ```
