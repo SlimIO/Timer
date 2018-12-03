@@ -31,3 +31,7 @@ const timerId = timer.setInterval(() => {
 // Later...
 timer.clearTimer(timerId);
 ```
+
+## ROADMAP
+- complete package with `slimio/is` to check argument ?
+- complete with better test
