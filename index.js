@@ -23,6 +23,7 @@ let currTimeId = 0;
 function now() {
     const [seconds, nanoseconds] = process.hrtime();
 
+    // eslint-disable-next-line no-mixed-operators
     return seconds * 1e3 + nanoseconds / 1e6;
 }
 
