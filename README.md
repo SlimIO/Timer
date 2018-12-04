@@ -1,9 +1,11 @@
 # Timer
-SlimIO - NodeJS Driftless Interval Timer. This package is inspired by [driftless](https://github.com/dbkaplun/driftless)
-
 ![MIT](https://img.shields.io/github/license/mashape/apistatus.svg)
 ![V1.0](https://img.shields.io/badge/version-1.0.1-blue.svg)
 ![0DEP](https://img.shields.io/badge/Dependencies-0-yellow.svg)
+
+SlimIO - NodeJS Driftless Interval Timer. This package is inspired by [driftless](https://github.com/dbkaplun/driftless)
+
+> Note: We need low-level code to ensure the timer precision (without lolex).
 
 ## Getting Started
 
@@ -29,9 +31,14 @@ const timerId = timer.setInterval(() => {
 }, 1000);
 
 // Later...
-timer.clearTimer(timerId);
+timer.clearInterval(timerId);
 ```
 
-## ROADMAP
-- complete package with `slimio/is` to check argument ?
-- complete with better test
+## API
+
+### timer.setInterval(handler: Function, intervalMs: number): number
+Create a new interval. Same API as Node.js !
+
+### timer.clearInterval(intervalId: number): void
+Clear a given interval id (the number returned by setInterval).
+
