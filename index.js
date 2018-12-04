@@ -1,6 +1,10 @@
 // Require NodeJS Dependencies
 const nodeTimer = require("timers");
 
+/**
+ * @namespace Timer
+ */
+
 // CONSTANTS
 const THRESHOLD_MS = 1;
 const AGGRESSION_RATE = 1.1;
@@ -54,6 +58,7 @@ function setTimer(id, opts) {
 /**
  * @function clearInterval
  * @desc Clear a timer (interval or timeout) with his id.
+ * @memberof Timer#
  * @param {!Number} id Time handle id
  * @returns {void}
  */
@@ -67,6 +72,7 @@ function clearInterval(id) {
 /**
  * @function setInterval
  * @desc Same as NodeJS.setInterval with no Drift
+ * @memberof Timer#
  * @param {*} callFN Function handler that should be executed after delayMs
  * @param {!Number} delayMs Delay in milliseconds before callFN execution
  * @param  {...any} params Handler parameters
