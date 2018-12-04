@@ -25,7 +25,10 @@
   },
   "keywords": [
     "SlimIO",
-    "monitoring"
+    "Node.js",
+    "Timer",
+    "No-drift",
+    "Driftless"
   ],
   "author": "SlimIO",
   "license": "MIT",
