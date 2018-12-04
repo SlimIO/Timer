@@ -2,7 +2,7 @@
 SlimIO - NodeJS Driftless Interval Timer. This package is inspired by [driftless](https://github.com/dbkaplun/driftless)
 
 ![MIT](https://img.shields.io/github/license/mashape/apistatus.svg)
-![V1.0](https://img.shields.io/badge/version-1.0.0-blue.svg)
+![V1.0](https://img.shields.io/badge/version-1.0.1-blue.svg)
 ![0DEP](https://img.shields.io/badge/Dependencies-0-yellow.svg)
 
 ## Getting Started
