@@ -7,6 +7,9 @@ SlimIO - NodeJS Driftless Interval Timer. This package is inspired by [driftless
 
 > Note: We need low-level code to ensure the timer precision (without lolex).
 
+## Requirements
+- Node.js v10 or higher
+
 ## Getting Started
 
 This package is available in the Node Package Repository and can be easily installed with [npm](https://docs.npmjs.com/getting-started/what-is-npm) or [yarn](https://yarnpkg.com).
@@ -42,3 +45,5 @@ Create a new interval. Same API as Node.js !
 ### timer.clearInterval(intervalId: number): void
 Clear a given interval id (the number returned by setInterval).
 
+## License
+MIT
