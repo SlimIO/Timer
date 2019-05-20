@@ -1,9 +1,9 @@
 # Timer
-![MIT](https://img.shields.io/github/license/mashape/apistatus.svg)
 ![V1.0](https://img.shields.io/badge/version-1.0.1-blue.svg)
+![MIT](https://img.shields.io/github/license/mashape/apistatus.svg)
 ![0DEP](https://img.shields.io/badge/Dependencies-0-yellow.svg)
 
-SlimIO - NodeJS Driftless Interval Timer. This package is inspired by [driftless](https://github.com/dbkaplun/driftless)
+SlimIO - Node.js Driftless Interval Timer. This package is inspired by [driftless](https://github.com/dbkaplun/driftless)
 
 > ⚠️ This package is experimental (Please dont use it outside).
 
