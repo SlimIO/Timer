@@ -45,5 +45,8 @@ Create a new interval. Same API as Node.js !
 ### timer.clearInterval(intervalId: number): void
 Clear a given interval id (the number returned by setInterval).
 
+## Dependencies
+This project have no dependencies.
+
 ## License
 MIT
