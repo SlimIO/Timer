@@ -1,7 +1,10 @@
 # Timer
-![V1.0](https://img.shields.io/badge/version-1.0.1-blue.svg)
+![Version](https://img.shields.io/badge/dynamic/json.svg?url=https://raw.githubusercontent.com/SlimIO/Timer/master/package.json?token=Aeue0P3eryCYRikk9tHZScyXOpqtMvFIks5ca-XwwA%3D%3D&query=$.version&label=Version)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/SlimIO/Timer/commit-activity)
 ![MIT](https://img.shields.io/github/license/mashape/apistatus.svg)
-![0DEP](https://img.shields.io/badge/Dependencies-0-yellow.svg)
+![dep](https://img.shields.io/david/SlimIO/Timer.svg)
+![size](https://img.shields.io/github/repo-size/SlimIO/Timer.svg)
+[![Known Vulnerabilities](https://snyk.io/test/github/SlimIO/Timer/badge.svg?targetFile=package.json)](https://snyk.io/test/github/SlimIO/Timer?targetFile=package.json)
 
 SlimIO - Node.js Driftless Interval Timer. This package is inspired by [driftless](https://github.com/dbkaplun/driftless)
 
