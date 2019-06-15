@@ -1,6 +1,3 @@
-/// <reference types="node" />
-/// <reference types="@types/node" />
-
 declare namespace Timer {
     type fn = (...any) => void;
 
