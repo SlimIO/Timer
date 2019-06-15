@@ -12,7 +12,7 @@ SlimIO - Node.js Driftless Interval Timer. This package is inspired by [driftles
 > ⚠️ This package is experimental (Please dont use it outside).
 
 ## Requirements
-- Node.js v10 or higher
+- [Node.js](https://nodejs.org/en/) v10 or higher
 
 ## Getting Started
 
