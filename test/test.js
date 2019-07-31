@@ -5,9 +5,6 @@ const Timer = require("../index.js");
 
 japaTest("setTimeout", async(assert) => {
     let count = 0;
-    /**
-     * @function callback
-     */
     function callback() {
         count++;
     }
@@ -25,9 +22,6 @@ japaTest("setTimeout", async(assert) => {
 
 japaTest("setTimeout without time", async(assert) => {
     let count = 0;
-    /**
-     * @function callback
-     */
     function callback() {
         count++;
     }
