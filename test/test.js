@@ -1,40 +1,43 @@
 "use strict";
 
+// Require Third-party Dependencies
 const japaTest = require("japa");
+
+// Require Internal Dependencies
 const Timer = require("../index.js");
 
 japaTest("setTimeout", async(assert) => {
+    assert.plan(1);
     let count = 0;
     function callback() {
         count++;
     }
 
     const timerInterval = Timer.setInterval(callback, 100);
-    await new Promise((resolve) => {
-        setTimeout(() => {
-            assert.equal(count, 2);
-            Timer.clearInterval(timerInterval);
-            console.log("test");
-            resolve();
-        }, 202);
-    });
+    try {
+        await new Promise((resolve) => setTimeout(resolve, 205));
+        assert.equal(count, 2);
+    }
+    finally {
+        Timer.clearInterval(timerInterval);
+    }
 });
 
 japaTest("setTimeout without time", async(assert) => {
+    assert.plan(1);
     let count = 0;
     function callback() {
         count++;
     }
 
     const timerInterval = Timer.setInterval(callback);
-    await new Promise((resolve) => {
-        setTimeout(() => {
-            assert.equal(count, 2);
-            Timer.clearInterval(timerInterval);
-            console.log("test");
-            resolve();
-        }, 4);
-    });
+    try {
+        await new Promise((resolve) => setTimeout(resolve, 4));
+        assert.equal(count, 2);
+    }
+    finally {
+        Timer.clearInterval(timerInterval);
+    }
 });
 
 japaTest("clear unexistant interval", async(assert) => {
