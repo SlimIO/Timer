@@ -1,3 +1,5 @@
+"use strict";
+
 // Require NodeJS Dependencies
 const nodeTimer = require("timers");
 
@@ -10,9 +12,9 @@ const THRESHOLD_MS = 1;
 const AGGRESSION_RATE = 1.1;
 
 /**
- * @const timeHandles
- * @type {Map<Number, NodeJS.Timeout>}
- * @desc Map of timeOut handles for Interval and Timeout
+ * @constant timeHandles
+ * @type {Map<number, NodeJS.Timeout>}
+ * @description Map of timeOut handles for Interval and Timeout
  */
 const timeHandles = new Map();
 
@@ -21,8 +23,8 @@ let currTimeId = 0;
 
 /**
  * @function now
- * @desc Return the current time with no clock drift
- * @return {Number}
+ * @description Return the current time with no clock drift
+ * @returns {number}
  */
 function now() {
     const [seconds, nanoseconds] = process.hrtime();
@@ -33,10 +35,10 @@ function now() {
 
 /**
  * @function setTimer
- * @desc Set a new aggressive timeOut timer
- * @param {!Number} id Timer handle id
+ * @description Set a new aggressive timeOut timer
+ * @param {!number} id Timer handle id
  * @param {*} opts timer options
- * @param {Number} opts.executedAt The timestamp at which timer should be executed
+ * @param {number} opts.executedAt The timestamp at which timer should be executed
  * @param {*} opts.fn The callback that should be executed when the time is elapsed
  * @returns {void}
  */
@@ -57,9 +59,9 @@ function setTimer(id, opts) {
 
 /**
  * @function clearInterval
- * @desc Clear a timer (interval or timeout) with his id.
+ * @description Clear a timer (interval or timeout) with his id.
  * @memberof Timer#
- * @param {!Number} id Time handle id
+ * @param {!number} id Time handle id
  * @returns {void}
  */
 function clearInterval(id) {
@@ -71,12 +73,12 @@ function clearInterval(id) {
 
 /**
  * @function setInterval
- * @desc Same as NodeJS.setInterval with no Drift
+ * @description Same as NodeJS.setInterval with no Drift
  * @memberof Timer#
  * @param {*} callFN Function handler that should be executed after delayMs
- * @param {!Number} delayMs Delay in milliseconds before callFN execution
+ * @param {!number} delayMs Delay in milliseconds before callFN execution
  * @param  {...any} params Handler parameters
- * @returns {Number}
+ * @returns {number}
  */
 function setInterval(callFN, delayMs = 1, ...params) {
     const id = currTimeId++;
