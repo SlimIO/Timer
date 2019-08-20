@@ -39,12 +39,13 @@ japaTest("setTimeout", async(assert) => {
 
 japaTest("setTimeout without time", async(assert) => {
     assert.plan(1);
+    const possibleValues = new Set([3, 4, 5]);
     count = 0;
 
     const timerInterval = Timer.setInterval(callback);
     try {
         await new Promise((resolve) => setTimeout(resolve, 4));
-        assert.equal(count, 4);
+        assert.equal(possibleValues.has(count), true);
     }
     finally {
         Timer.clearInterval(timerInterval);
