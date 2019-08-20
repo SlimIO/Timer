@@ -21,6 +21,10 @@ const timeHandles = new Map();
 // Timeout and Interval ID
 let currTimeId = 0;
 
+// Force V8 de-opt (avoid cold boot).
+now();
+now();
+
 /**
  * @function now
  * @description Return the current time with no clock drift
@@ -43,18 +47,14 @@ function now() {
  * @returns {void}
  */
 function setTimer(id, opts) {
-    /** @type {NodeJS.Timeout} */
-    let timer;
-
     const delayMs = opts.executeAt - now();
     if (delayMs > THRESHOLD_MS) {
-        timer = nodeTimer.setTimeout(() => setTimer(id, opts), delayMs / AGGRESSION_RATE);
+        const timer = nodeTimer.setTimeout(() => setTimer(id, opts), delayMs / AGGRESSION_RATE);
+        timeHandles.set(id, timer);
     }
     else {
-        timer = nodeTimer.setTimeout(() => opts.fn(), 0);
+        opts.fn();
     }
-
-    timeHandles.set(id, timer);
 }
 
 /**
