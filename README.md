@@ -6,7 +6,6 @@
 ![size](https://img.shields.io/github/repo-size/SlimIO/Timer.svg)
 [![Known Vulnerabilities](https://snyk.io/test/github/SlimIO/Timer/badge.svg?targetFile=package.json)](https://snyk.io/test/github/SlimIO/Timer?targetFile=package.json)
 [![Build Status](https://travis-ci.com/SlimIO/Timer.svg?branch=master)](https://travis-ci.com/SlimIO/Timer)
-[![Greenkeeper badge](https://badges.greenkeeper.io/SlimIO/Timer.svg)](https://greenkeeper.io/)
 
 SlimIO - Node.js Driftless Interval Timer. This package is inspired by [driftless](https://github.com/dbkaplun/driftless)
 
