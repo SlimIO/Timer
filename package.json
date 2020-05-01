@@ -11,7 +11,9 @@
     "test": "cross-env psp && node test/test.js",
     "doc": "jsdoc -c ./jsdoc.json -r -R ./README.md -P ./package.json --verbose",
     "coverage": "nyc npm test",
-    "report": "nyc report --reporter=html"
+    "report": "nyc report --reporter=html",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "husky": {
     "hooks": {
@@ -61,5 +63,9 @@
     "statements": 98,
     "functions": 98,
     "branches": 90
+  },
+  "snyk": true,
+  "dependencies": {
+    "snyk": "^1.316.1"
   }
 }
